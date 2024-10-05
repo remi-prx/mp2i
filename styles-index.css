@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #141f2b;
+}
+.main-div{
+    text-align: center;
+    align-items: center;
+    color: wheat;
+}
+
+.header{
+    background: #214d7b;
+    padding: 10px;
+    margin-top: 0;
+}
+
+.webcontainers-parts-container{
+    display: grid;
+    grid-template-columns: 0.6fr 0.4fr;
+}
+
+.webcontainer {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #214d7b;
+    height: 70px;
+    transition: height 1s ease ;
+    width: 95%;
+    margin: auto;
+    margin-top: 0px;
+}
+
+.shortcut {
+    margin: auto;
+    background-color: #214d7b;
+    width: 70px;
+    height: 70px;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0; 
+  transform: translateY(20px);
+  animation: appear 0.5s forwards;
+}
+
+.shortcut h4,h5,h6{
+    color: white;
+    margin-top: 0px;
+}
+
+@keyframes appear {
+    to {
+      opacity: 1;
+      transform: translateY(0); 
+    }
+  }
+  
+  .shortcut:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  
+  .shortcut:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  
+  .shortcut:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  .shortcut:nth-child(4) {
+    animation-delay: 0.8s;
+  }
+  
+  .shortcut:nth-child(5) {
+    animation-delay: 1s;
+  }
+  
+  .shortcut a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .shortcut img {
+    width: 50px;
+    height: 50px;
+  }
+  
+
+
+.shortcuts-container {
+    display: flex;
+    justify-content: space-between; /* Space between items */
+    gap: 20px; /* Optional: space between items */
+    padding: 0px;
+    width: 90%;
+    margin: auto;
+  }
+
+.webcontainer .closed_embed{
+    margin-top: 0px;
+    width: 90%;
+    height: 000px;
+    transition: height 1s ease, margin-top 1s ease, opacity 1s ease;
+    opacity: 0;
+}   
+.webcontainer .open_embed{
+    margin-top: 25px;
+    opacity: 1;
+    width: 90%;
+    height: 600px;
+    transition: height 1s ease ;
+    transition: height 1s ease, margin-top 1s ease, opacity 1s ease;
+}
+
+hr {
+    color:#214d7b;
+}
+
+.footer {
+    position: absolute; /* Place la footer par rapport au parent (html/body) */
+    bottom: 0; /* Toujours en bas de la page */
+    width: 100%; /* S'assurer qu'elle occupe toute la largeur */
+    text-align: center; /* Centrer le texte */
+    background-color: #214d7b; /* Par exemple, tu peux ajouter une couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 10px 0; /* Espacement en haut et en bas */
+}
+
+@media (max-height: 600px) {
+    .footer {
+        position: fixed; /* Fixe la footer au bas de la fenêtre */
+    }
+}
+
