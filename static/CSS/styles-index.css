@@ -118,13 +118,12 @@ hr {
 }
 
 .footer {
-    position: absolute; /* Place la footer par rapport au parent (html/body) */
-    bottom: 0; /* Toujours en bas de la page */
-    width: 100%; /* S'assurer qu'elle occupe toute la largeur */
-    text-align: center; /* Centrer le texte */
-    background-color: #214d7b; /* Par exemple, tu peux ajouter une couleur de fond */
-    color: white; /* Couleur du texte */
-    padding: 10px 0; /* Espacement en haut et en bas */
+    bottom: 0;
+    width: 100%; 
+    text-align: center; 
+    background-color: #214d7b; 
+    color: white; 
+    padding: 10px 0; 
 }
 
 @media (max-height: 600px) {
