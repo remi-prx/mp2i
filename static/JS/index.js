@@ -17,3 +17,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 })
 
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    function addOrRemoveShortcut() {
+        const shortcutsContainer = document.querySelector(".shortcuts-container");
+        const shortcutMaths = document.getElementById("shortcut-maths");
+
+        if (window.innerWidth < 800) {
+            if (!shortcutMaths) {
+                const newShortcut = document.createElement("div");
+                newShortcut.classList.add("shortcut");
+                newShortcut.id = "shortcut-maths";
+                newShortcut.innerHTML = `
+                    <a href="https://mp2icamilleguerin.blogspot.com/" target="_blank">
+                        <img src="/static/icons/math.png" alt="Mathématiques">
+                        <h4>Mathématiques</h4>
+                    </a>
+                `;
+                shortcutsContainer.appendChild(newShortcut);
+            }
+        } else {
+            if (shortcutMaths) {
+                shortcutsContainer.removeChild(shortcutMaths);
+            }
+        }
+    }
+
+    addOrRemoveShortcut();
+
+    window.addEventListener("resize", addOrRemoveShortcut);
+});
