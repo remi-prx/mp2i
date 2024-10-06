@@ -1,10 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-
     console.log("DOMContentLoaded")
     leftpartcontainer = document.getElementById("left-part-webcontainer")
     leftpartembed = document.getElementById("left-part-embed")
     leftparttitle = document.getElementById("right-part-title")
-    leftpartcontainer.addEventListener("click", () =>{
+    leftpartcontainer.addEventListener("click", () => {
         if (leftpartembed.classList == "open_embed") {
             leftparttitle.textContent = "˅"
             leftpartcontainer.style.height = "70px";
@@ -17,9 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 })
 
-
 document.addEventListener("DOMContentLoaded", () => {
-
     function addOrRemoveShortcut() {
         const shortcutsContainer = document.querySelector(".shortcuts-container");
         const shortcutMaths = document.getElementById("shortcut-maths");
@@ -35,7 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
                         <h4>Mathématiques</h4>
                     </a>
                 `;
-                shortcutsContainer.appendChild(newShortcut);
+                // Ajoute le nouveau raccourci en premier
+                shortcutsContainer.insertAdjacentElement('afterbegin', newShortcut);
             }
         } else {
             if (shortcutMaths) {
