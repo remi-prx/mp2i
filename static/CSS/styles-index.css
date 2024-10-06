@@ -34,6 +34,12 @@ body {
     width: 95%;
     margin: auto;
     margin-top: 0px;
+    transition: height 1s ease, background-color 1s ease;
+}
+
+.webcontainer:hover {
+    background-color: #2d68a8;
+    transition: height 1s ease, background-color 1s ease;
 }
 
 .shortcut {
@@ -44,9 +50,34 @@ body {
     color: white;
     padding: 10px;
     border-radius: 5px;
-    opacity: 0;
-    transform: translateY(20px);
+    opacity: 0; 
+    transform: translateY(20px); /* Pour l'animation d'apparition */
     animation: appear 0.5s forwards;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Ajoute 'transform' pour l'animation */
+}
+
+.shortcut:hover {
+    background-color: #2d68a8; /* Change la couleur de fond au survol */
+    transform: translateY(20px) scale(1.1); /* Grossir de 10% */
+}
+
+.webcontainer-text-container{
+    display: grid;
+    grid-template-columns: 0.995fr 0.005fr;
+    column-gap: 0fr;
+}
+
+#right-part-title{
+    margin-right: 10px;
+}
+
+#left-part-title{
+    padding-left:25px;
+}
+
+.shortcut img{
+    max-width: 50px;
+    max-height: 50px;
 }
 
 .shortcut h4, h5, h6 {
@@ -126,11 +157,11 @@ hr {
     text-align: center;
     background-color: #214d7b; 
     position: relative; 
-    width: 100%; /* S'assurer que le footer prend toute la largeur */
+    width: 1fr;
 }
 
 @media (max-height: 600px) {
     .footer {
-        position: fixed; /* Fixe le footer au bas de la fenêtre */
+        position: fixed;
     }
 }
