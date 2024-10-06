@@ -262,8 +262,4 @@ hr {
     max-width: 100px;
 }
 
-@media (max-height: 600px) {
-    .footer {
-        position: fixed;
-    }
-}
+
