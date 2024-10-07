@@ -14,9 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
         leftpartembed.classList.toggle("open_embed");
         leftpartembed.classList.toggle("closed_embed");
     });
-})
-
-document.addEventListener("DOMContentLoaded", () => {
     function addOrRemoveShortcut() {
         const shortcutsContainer = document.querySelector(".shortcuts-container");
         const shortcutMaths = document.getElementById("shortcut-maths");
@@ -43,6 +40,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     addOrRemoveShortcut();
+
+    const redirect_bar = document.getElementById("footer-redirect")
+    redirect_bar.addEventListener("click",()=>{
+        window.location.href = "https://lydre.onrender.com/"
+    })
 
     window.addEventListener("resize", addOrRemoveShortcut);
 });
